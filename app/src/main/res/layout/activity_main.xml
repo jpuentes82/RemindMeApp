@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@drawable/fondoiniciosesion"
+    tools:context=".MainActivity">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicio de Sesión"
+            android:textSize="40sp"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/white"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresa tu correo electronico y contraseña"
+            android:textSize="15sp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Correo electronico"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="50dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="15sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Contraseña"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btnInicioSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="320dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="25dp"
+                android:text="Iniciar sesión"
+                android:backgroundTint="@color/black"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¡No tiene una cuenta?"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="55dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
