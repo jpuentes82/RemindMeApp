@@ -22,16 +22,15 @@ class MenuRecordatorio : AppCompatActivity() {
         listaCategorias.adapter = adaptador
 
         listaCategorias.setOnItemClickListener { parent, view, position, id ->
-            val categoriaSeleccionada = categorias[position]
-            if (categoriaSeleccionada == "Trabajo") {
-                abrirAgregarRecordatorio()
-            }
+            abrirAgregarRecordatorio(categorias[position])
         }
 
+
         val btnAgregar = findViewById<Button>(R.id.btnAgregar)
-        btnAgregar.setOnClickListener {
+            btnAgregar.setOnClickListener {
             abrirAgregarCategoria()
         }
+
     }
 
     private fun abrirAgregarCategoria() {
@@ -39,8 +38,9 @@ class MenuRecordatorio : AppCompatActivity() {
         startActivityForResult(intent, REQUEST_CODE_AGREGAR_CATEGORIA)
     }
 
-    private fun abrirAgregarRecordatorio() {
+    private fun abrirAgregarRecordatorio(categoria: String) {
         val intent = Intent(this, AgregarRecordatorioActivity::class.java)
+        intent.putExtra("CATEGORIA", categoria)
         startActivity(intent)
     }
 
